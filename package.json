@@ -1,0 +1,15 @@
+{
+  "name": "privacy-monitor",
+  "version": "1.0.0",
+  "description": "监控各大APP隐私政策更新",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^2.1.1",
+    "request": "2.88.2"
+  }
+}
