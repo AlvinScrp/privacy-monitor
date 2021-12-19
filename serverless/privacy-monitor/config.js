@@ -12,7 +12,7 @@ const evals = [
     }, {
         name: 'meituan', label: '美团',
         url: 'https://rules-center.meituan.com/rules-detail/2',
-        dateSelector: '#app > div > div > div > div.content-container > div > div.detail.ProseMirror > p:nth-child(48) > strong > span',
+        dateSelector: '#app > div > div > div > div.content-container > div > div.detail.ProseMirror > p:nth-child(2) > strong > span',
         contentSelector: '#app > div > div > div > div.content-container > div'
     }, {
         name: 'douyin', label: '抖音',

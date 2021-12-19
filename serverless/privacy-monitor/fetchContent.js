@@ -16,9 +16,9 @@ async function fetchContent(evalConfigs = evals) {
     });
     const page = await browser.newPage();
     for (let i = 0; i < evalConfigs.length; i++) {
-        const { label, url, contentSelector: selector } = evalConfigs[i]
+        const { label, url, dateSelector, contentSelector: selector } = evalConfigs[i]
         await page.goto(url);
-        await page.waitForSelector(selector)
+        await page.waitForSelector(dateSelector)
         let content = await page.$eval(selector, el => el.innerText);
         // console.log(content)
         results.push({ label, content })
