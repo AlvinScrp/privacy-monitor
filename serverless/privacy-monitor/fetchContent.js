@@ -16,16 +16,13 @@ async function fetchContent(evalConfigs = evals) {
     });
     const page = await browser.newPage();
     for (let i = 0; i < evalConfigs.length; i++) {
-        const { label, url, dateSelector, contentSelector: selector } = evalConfigs[i]
+        const { label, url, dateSelector, contentSelector } = evalConfigs[i]
         await page.goto(url);
         await page.waitForSelector(dateSelector)
-        let content = await page.$eval(selector, el => el.innerText);
-        // console.log(content)
+        let content = await page.$eval(contentSelector, el => el.innerText);
         results.push({ label, content })
-        // console.log(results.length)
     }
     await browser.close();
-
     return results
 }
 module.exports = fetchContent;
